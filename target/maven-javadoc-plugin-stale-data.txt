@@ -1,0 +1,130 @@
+@options
+@packages
+@argfile
+-classpath
+'E:/apache-maven-3.8.1/repo/org/springframework/boot/spring-boot-starter/2.1.3.RELEASE/spring-boot-starter-2.1.3.RELEASE.jar;E:/apache-maven-3.8.1/repo/org/springframework/boot/spring-boot/2.1.3.RELEASE/spring-boot-2.1.3.RELEASE.jar;E:/apache-maven-3.8.1/repo/org/springframework/spring-context/5.1.5.RELEASE/spring-context-5.1.5.RELEASE.jar;E:/apache-maven-3.8.1/repo/org/springframework/spring-aop/5.1.5.RELEASE/spring-aop-5.1.5.RELEASE.jar;E:/apache-maven-3.8.1/repo/org/springframework/spring-beans/5.1.5.RELEASE/spring-beans-5.1.5.RELEASE.jar;E:/apache-maven-3.8.1/repo/org/springframework/spring-expression/5.1.5.RELEASE/spring-expression-5.1.5.RELEASE.jar;E:/apache-maven-3.8.1/repo/org/springframework/boot/spring-boot-autoconfigure/2.1.3.RELEASE/spring-boot-autoconfigure-2.1.3.RELEASE.jar;E:/apache-maven-3.8.1/repo/org/springframework/boot/spring-boot-starter-logging/2.1.3.RELEASE/spring-boot-starter-logging-2.1.3.RELEASE.jar;E:/apache-maven-3.8.1/repo/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar;E:/apache-maven-3.8.1/repo/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.jar;E:/apache-maven-3.8.1/repo/org/apache/logging/log4j/log4j-to-slf4j/2.11.2/log4j-to-slf4j-2.11.2.jar;E:/apache-maven-3.8.1/repo/org/apache/logging/log4j/log4j-api/2.11.2/log4j-api-2.11.2.jar;E:/apache-maven-3.8.1/repo/org/slf4j/jul-to-slf4j/1.7.25/jul-to-slf4j-1.7.25.jar;E:/apache-maven-3.8.1/repo/javax/annotation/javax.annotation-api/1.3.2/javax.annotation-api-1.3.2.jar;E:/apache-maven-3.8.1/repo/org/springframework/spring-core/5.1.5.RELEASE/spring-core-5.1.5.RELEASE.jar;E:/apache-maven-3.8.1/repo/org/springframework/spring-jcl/5.1.5.RELEASE/spring-jcl-5.1.5.RELEASE.jar;E:/apache-maven-3.8.1/repo/org/yaml/snakeyaml/1.23/snakeyaml-1.23.jar;E:/apache-maven-3.8.1/repo/org/springframework/boot/spring-boot-configuration-processor/2.1.3.RELEASE/spring-boot-configuration-processor-2.1.3.RELEASE.jar;E:/apache-maven-3.8.1/repo/org/apache/pulsar/pulsar-client-original/2.9.3/pulsar-client-original-2.9.3.jar;E:/apache-maven-3.8.1/repo/org/apache/pulsar/pulsar-client-api/2.9.3/pulsar-client-api-2.9.3.jar;E:/apache-maven-3.8.1/repo/org/apache/pulsar/pulsar-common/2.9.3/pulsar-common-2.9.3.jar;E:/apache-maven-3.8.1/repo/org/apache/pulsar/pulsar-client-admin-api/2.9.3/pulsar-client-admin-api-2.9.3.jar;E:/apache-maven-3.8.1/repo/io/swagger/swagger-annotations/1.6.2/swagger-annotations-1.6.2.jar;E:/apache-maven-3.8.1/repo/com/fasterxml/jackson/core/jackson-databind/2.9.8/jackson-databind-2.9.8.jar;E:/apache-maven-3.8.1/repo/com/google/guava/guava/30.1-jre/guava-30.1-jre.jar;E:/apache-maven-3.8.1/repo/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar;E:/apache-maven-3.8.1/repo/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;E:/apache-maven-3.8.1/repo/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar;E:/apache-maven-3.8.1/repo/org/checkerframework/checker-qual/3.5.0/checker-qual-3.5.0.jar;E:/apache-maven-3.8.1/repo/com/google/errorprone/error_prone_annotations/2.3.4/error_prone_annotations-2.3.4.jar;E:/apache-maven-3.8.1/repo/com/google/j2objc/j2objc-annotations/1.3/j2objc-annotations-1.3.jar;E:/apache-maven-3.8.1/repo/io/netty/netty-handler/4.1.33.Final/netty-handler-4.1.33.Final.jar;E:/apache-maven-3.8.1/repo/io/netty/netty-transport-native-epoll/4.1.33.Final/netty-transport-native-epoll-4.1.33.Final-linux-x86_64.jar;E:/apache-maven-3.8.1/repo/io/netty/netty-transport-native-unix-common/4.1.33.Final/netty-transport-native-unix-common-4.1.33.Final.jar;E:/apache-maven-3.8.1/repo/io/netty/netty-transport-native-unix-common/4.1.33.Final/netty-transport-native-unix-common-4.1.33.Final-linux-x86_64.jar;E:/apache-maven-3.8.1/repo/org/apache/bookkeeper/bookkeeper-common-allocator/4.14.5/bookkeeper-common-allocator-4.14.5.jar;E:/apache-maven-3.8.1/repo/org/apache/bookkeeper/cpu-affinity/4.14.5/cpu-affinity-4.14.5.jar;E:/apache-maven-3.8.1/repo/commons-configuration/commons-configuration/1.10/commons-configuration-1.10.jar;E:/apache-maven-3.8.1/repo/commons-lang/commons-lang/2.6/commons-lang-2.6.jar;E:/apache-maven-3.8.1/repo/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar;E:/apache-maven-3.8.1/repo/io/airlift/aircompressor/0.20/aircompressor-0.20.jar;E:/apache-maven-3.8.1/repo/org/apache/bookkeeper/circe-checksum/4.14.5/circe-checksum-4.14.5.jar;E:/apache-maven-3.8.1/repo/io/netty/netty-tcnative-boringssl-static/2.0.20.Final/netty-tcnative-boringssl-static-2.0.20.Final.jar;E:/apache-maven-3.8.1/repo/io/netty/netty-codec-haproxy/4.1.33.Final/netty-codec-haproxy-4.1.33.Final.jar;E:/apache-maven-3.8.1/repo/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.9.8/jackson-dataformat-yaml-2.9.8.jar;E:/apache-maven-3.8.1/repo/javax/ws/rs/javax.ws.rs-api/2.1/javax.ws.rs-api-2.1.jar;E:/apache-maven-3.8.1/repo/commons-io/commons-io/2.8.0/commons-io-2.8.0.jar;E:/apache-maven-3.8.1/repo/com/beust/jcommander/1.78/jcommander-1.78.jar;E:/apache-maven-3.8.1/repo/org/apache/pulsar/pulsar-transaction-common/2.9.3/pulsar-transaction-common-2.9.3.jar;E:/apache-maven-3.8.1/repo/org/apache/pulsar/bouncy-castle-bc/2.9.3/bouncy-castle-bc-2.9.3-pkg.jar;E:/apache-maven-3.8.1/repo/org/bouncycastle/bcpkix-jdk15on/1.69/bcpkix-jdk15on-1.69.jar;E:/apache-maven-3.8.1/repo/org/bouncycastle/bcprov-jdk15on/1.69/bcprov-jdk15on-1.69.jar;E:/apache-maven-3.8.1/repo/org/bouncycastle/bcutil-jdk15on/1.69/bcutil-jdk15on-1.69.jar;E:/apache-maven-3.8.1/repo/org/bouncycastle/bcprov-ext-jdk15on/1.69/bcprov-ext-jdk15on-1.69.jar;E:/apache-maven-3.8.1/repo/io/netty/netty-codec-http/4.1.33.Final/netty-codec-http-4.1.33.Final.jar;E:/apache-maven-3.8.1/repo/io/netty/netty-common/4.1.33.Final/netty-common-4.1.33.Final.jar;E:/apache-maven-3.8.1/repo/io/netty/netty-buffer/4.1.33.Final/netty-buffer-4.1.33.Final.jar;E:/apache-maven-3.8.1/repo/io/netty/netty-transport/4.1.33.Final/netty-transport-4.1.33.Final.jar;E:/apache-maven-3.8.1/repo/io/netty/netty-codec/4.1.33.Final/netty-codec-4.1.33.Final.jar;E:/apache-maven-3.8.1/repo/io/netty/netty-handler-proxy/4.1.33.Final/netty-handler-proxy-4.1.33.Final.jar;E:/apache-maven-3.8.1/repo/io/netty/netty-codec-socks/4.1.33.Final/netty-codec-socks-4.1.33.Final.jar;E:/apache-maven-3.8.1/repo/io/netty/netty-resolver-dns/4.1.33.Final/netty-resolver-dns-4.1.33.Final.jar;E:/apache-maven-3.8.1/repo/io/netty/netty-resolver/4.1.33.Final/netty-resolver-4.1.33.Final.jar;E:/apache-maven-3.8.1/repo/io/netty/netty-codec-dns/4.1.33.Final/netty-codec-dns-4.1.33.Final.jar;E:/apache-maven-3.8.1/repo/org/apache/commons/commons-lang3/3.8.1/commons-lang3-3.8.1.jar;E:/apache-maven-3.8.1/repo/org/asynchttpclient/async-http-client/2.12.1/async-http-client-2.12.1.jar;E:/apache-maven-3.8.1/repo/org/asynchttpclient/async-http-client-netty-utils/2.12.1/async-http-client-netty-utils-2.12.1.jar;E:/apache-maven-3.8.1/repo/com/typesafe/netty/netty-reactive-streams/2.0.4/netty-reactive-streams-2.0.4.jar;E:/apache-maven-3.8.1/repo/com/sun/activation/javax.activation/1.2.0/javax.activation-1.2.0.jar;E:/apache-maven-3.8.1/repo/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar;E:/apache-maven-3.8.1/repo/commons-codec/commons-codec/1.11/commons-codec-1.11.jar;E:/apache-maven-3.8.1/repo/com/yahoo/datasketches/sketches-core/0.8.3/sketches-core-0.8.3.jar;E:/apache-maven-3.8.1/repo/com/yahoo/datasketches/memory/0.8.3/memory-0.8.3.jar;E:/apache-maven-3.8.1/repo/com/google/code/gson/gson/2.8.5/gson-2.8.5.jar;E:/apache-maven-3.8.1/repo/org/apache/avro/avro/1.10.2/avro-1.10.2.jar;E:/apache-maven-3.8.1/repo/com/fasterxml/jackson/core/jackson-core/2.9.8/jackson-core-2.9.8.jar;E:/apache-maven-3.8.1/repo/org/apache/commons/commons-compress/1.20/commons-compress-1.20.jar;E:/apache-maven-3.8.1/repo/org/apache/avro/avro-protobuf/1.10.2/avro-protobuf-1.10.2.jar;E:/apache-maven-3.8.1/repo/com/fasterxml/jackson/module/jackson-module-jsonSchema/2.9.8/jackson-module-jsonSchema-2.9.8.jar;E:/apache-maven-3.8.1/repo/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0.jar;E:/apache-maven-3.8.1/repo/javax/validation/validation-api/2.0.1.Final/validation-api-2.0.1.Final.jar;E:/apache-maven-3.8.1/repo/net/jcip/jcip-annotations/1.0/jcip-annotations-1.0.jar;E:/apache-maven-3.8.1/repo/io/projectreactor/reactor-core/3.4.16/reactor-core-3.4.16.jar;E:/apache-maven-3.8.1/repo/org/reactivestreams/reactive-streams/1.0.2/reactive-streams-1.0.2.jar;E:/apache-maven-3.8.1/repo/com/google/protobuf/protobuf-java/3.20.0/protobuf-java-3.20.0.jar'
+-encoding
+'UTF-8'
+-protected
+-source
+'8'
+-sourcepath
+'G:/code/clooker/admq-spring-boot-starter/src/main/java;G:/code/clooker/admq-spring-boot-starter/target/generated-sources/annotations'
+-author
+-bottom
+'Copyright &#169; 2023. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'G:/code/clooker/admq-spring-boot-starter/target/apidocs'
+-docencoding
+'UTF-8'
+-Xdoclint:none
+-doctitle
+'admq-spring-boot-starter 0.1 API'
+-linkoffline
+'https://docs.oracle.com/javase/8/docs/api' 'G:/code/clooker/admq-spring-boot-starter/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'admq-spring-boot-starter 0.1 API'
+io.github.casuallc
+'G:/code/clooker/admq-spring-boot-starter/src/main/java/io/github/casuallc/App.java'
+E:\apache-maven-3.8.1\repo\org\springframework\boot\spring-boot-starter\2.1.3.RELEASE\spring-boot-starter-2.1.3.RELEASE.jar = 1677223466632
+E:\apache-maven-3.8.1\repo\org\springframework\boot\spring-boot\2.1.3.RELEASE\spring-boot-2.1.3.RELEASE.jar = 1677223468414
+E:\apache-maven-3.8.1\repo\org\springframework\spring-context\5.1.5.RELEASE\spring-context-5.1.5.RELEASE.jar = 1677223468243
+E:\apache-maven-3.8.1\repo\org\springframework\spring-aop\5.1.5.RELEASE\spring-aop-5.1.5.RELEASE.jar = 1677223463363
+E:\apache-maven-3.8.1\repo\org\springframework\spring-beans\5.1.5.RELEASE\spring-beans-5.1.5.RELEASE.jar = 1677223465033
+E:\apache-maven-3.8.1\repo\org\springframework\spring-expression\5.1.5.RELEASE\spring-expression-5.1.5.RELEASE.jar = 1677223465205
+E:\apache-maven-3.8.1\repo\org\springframework\boot\spring-boot-autoconfigure\2.1.3.RELEASE\spring-boot-autoconfigure-2.1.3.RELEASE.jar = 1677223468608
+E:\apache-maven-3.8.1\repo\org\springframework\boot\spring-boot-starter-logging\2.1.3.RELEASE\spring-boot-starter-logging-2.1.3.RELEASE.jar = 1677223465853
+E:\apache-maven-3.8.1\repo\ch\qos\logback\logback-classic\1.2.3\logback-classic-1.2.3.jar = 1632704873979
+E:\apache-maven-3.8.1\repo\ch\qos\logback\logback-core\1.2.3\logback-core-1.2.3.jar = 1626404400336
+E:\apache-maven-3.8.1\repo\org\apache\logging\log4j\log4j-to-slf4j\2.11.2\log4j-to-slf4j-2.11.2.jar = 1677223465558
+E:\apache-maven-3.8.1\repo\org\apache\logging\log4j\log4j-api\2.11.2\log4j-api-2.11.2.jar = 1632298023546
+E:\apache-maven-3.8.1\repo\org\slf4j\jul-to-slf4j\1.7.25\jul-to-slf4j-1.7.25.jar = 1626235646591
+E:\apache-maven-3.8.1\repo\javax\annotation\javax.annotation-api\1.3.2\javax.annotation-api-1.3.2.jar = 1626235668607
+E:\apache-maven-3.8.1\repo\org\springframework\spring-core\5.1.5.RELEASE\spring-core-5.1.5.RELEASE.jar = 1677223467950
+E:\apache-maven-3.8.1\repo\org\springframework\spring-jcl\5.1.5.RELEASE\spring-jcl-5.1.5.RELEASE.jar = 1677223466147
+E:\apache-maven-3.8.1\repo\org\yaml\snakeyaml\1.23\snakeyaml-1.23.jar = 1636008108774
+E:\apache-maven-3.8.1\repo\org\springframework\boot\spring-boot-configuration-processor\2.1.3.RELEASE\spring-boot-configuration-processor-2.1.3.RELEASE.jar = 1677575092686
+E:\apache-maven-3.8.1\repo\org\apache\pulsar\pulsar-client-original\2.9.3\pulsar-client-original-2.9.3.jar = 1676864701095
+E:\apache-maven-3.8.1\repo\org\apache\pulsar\pulsar-client-api\2.9.3\pulsar-client-api-2.9.3.jar = 1676864538488
+E:\apache-maven-3.8.1\repo\org\apache\pulsar\pulsar-common\2.9.3\pulsar-common-2.9.3.jar = 1676864569831
+E:\apache-maven-3.8.1\repo\org\apache\pulsar\pulsar-client-admin-api\2.9.3\pulsar-client-admin-api-2.9.3.jar = 1676864542343
+E:\apache-maven-3.8.1\repo\io\swagger\swagger-annotations\1.6.2\swagger-annotations-1.6.2.jar = 1626235647850
+E:\apache-maven-3.8.1\repo\com\fasterxml\jackson\core\jackson-databind\2.9.8\jackson-databind-2.9.8.jar = 1626405400085
+E:\apache-maven-3.8.1\repo\com\google\guava\guava\30.1-jre\guava-30.1-jre.jar = 1626235656825
+E:\apache-maven-3.8.1\repo\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar = 1626235646892
+E:\apache-maven-3.8.1\repo\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar = 1626235646947
+E:\apache-maven-3.8.1\repo\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar = 1626235647058
+E:\apache-maven-3.8.1\repo\org\checkerframework\checker-qual\3.5.0\checker-qual-3.5.0.jar = 1626235647808
+E:\apache-maven-3.8.1\repo\com\google\errorprone\error_prone_annotations\2.3.4\error_prone_annotations-2.3.4.jar = 1626241276091
+E:\apache-maven-3.8.1\repo\com\google\j2objc\j2objc-annotations\1.3\j2objc-annotations-1.3.jar = 1626235647489
+E:\apache-maven-3.8.1\repo\io\netty\netty-handler\4.1.33.Final\netty-handler-4.1.33.Final.jar = 1677223475464
+E:\apache-maven-3.8.1\repo\io\netty\netty-transport-native-epoll\4.1.33.Final\netty-transport-native-epoll-4.1.33.Final-linux-x86_64.jar = 1677223469302
+E:\apache-maven-3.8.1\repo\io\netty\netty-transport-native-unix-common\4.1.33.Final\netty-transport-native-unix-common-4.1.33.Final.jar = 1677223469615
+E:\apache-maven-3.8.1\repo\io\netty\netty-transport-native-unix-common\4.1.33.Final\netty-transport-native-unix-common-4.1.33.Final-linux-x86_64.jar = 1677223470198
+E:\apache-maven-3.8.1\repo\org\apache\bookkeeper\bookkeeper-common-allocator\4.14.5\bookkeeper-common-allocator-4.14.5.jar = 1661422085088
+E:\apache-maven-3.8.1\repo\org\apache\bookkeeper\cpu-affinity\4.14.5\cpu-affinity-4.14.5.jar = 1661422084682
+E:\apache-maven-3.8.1\repo\commons-configuration\commons-configuration\1.10\commons-configuration-1.10.jar = 1626235550073
+E:\apache-maven-3.8.1\repo\commons-lang\commons-lang\2.6\commons-lang-2.6.jar = 1626235549951
+E:\apache-maven-3.8.1\repo\commons-logging\commons-logging\1.1.1\commons-logging-1.1.1.jar = 1626162408040
+E:\apache-maven-3.8.1\repo\io\airlift\aircompressor\0.20\aircompressor-0.20.jar = 1630027568608
+E:\apache-maven-3.8.1\repo\org\apache\bookkeeper\circe-checksum\4.14.5\circe-checksum-4.14.5.jar = 1661422092310
+E:\apache-maven-3.8.1\repo\io\netty\netty-tcnative-boringssl-static\2.0.20.Final\netty-tcnative-boringssl-static-2.0.20.Final.jar = 1660100303992
+E:\apache-maven-3.8.1\repo\io\netty\netty-codec-haproxy\4.1.33.Final\netty-codec-haproxy-4.1.33.Final.jar = 1677223470751
+E:\apache-maven-3.8.1\repo\com\fasterxml\jackson\dataformat\jackson-dataformat-yaml\2.9.8\jackson-dataformat-yaml-2.9.8.jar = 1676967033681
+E:\apache-maven-3.8.1\repo\javax\ws\rs\javax.ws.rs-api\2.1\javax.ws.rs-api-2.1.jar = 1626235550906
+E:\apache-maven-3.8.1\repo\commons-io\commons-io\2.8.0\commons-io-2.8.0.jar = 1626235617722
+E:\apache-maven-3.8.1\repo\com\beust\jcommander\1.78\jcommander-1.78.jar = 1626235648040
+E:\apache-maven-3.8.1\repo\org\apache\pulsar\pulsar-transaction-common\2.9.3\pulsar-transaction-common-2.9.3.jar = 1676864677613
+E:\apache-maven-3.8.1\repo\org\apache\pulsar\bouncy-castle-bc\2.9.3\bouncy-castle-bc-2.9.3-pkg.jar = 1676864681877
+E:\apache-maven-3.8.1\repo\org\bouncycastle\bcpkix-jdk15on\1.69\bcpkix-jdk15on-1.69.jar = 1626403955841
+E:\apache-maven-3.8.1\repo\org\bouncycastle\bcprov-jdk15on\1.69\bcprov-jdk15on-1.69.jar = 1626403961437
+E:\apache-maven-3.8.1\repo\org\bouncycastle\bcutil-jdk15on\1.69\bcutil-jdk15on-1.69.jar = 1626403954952
+E:\apache-maven-3.8.1\repo\org\bouncycastle\bcprov-ext-jdk15on\1.69\bcprov-ext-jdk15on-1.69.jar = 1626403961553
+E:\apache-maven-3.8.1\repo\io\netty\netty-codec-http\4.1.33.Final\netty-codec-http-4.1.33.Final.jar = 1677223473703
+E:\apache-maven-3.8.1\repo\io\netty\netty-common\4.1.33.Final\netty-common-4.1.33.Final.jar = 1677223475558
+E:\apache-maven-3.8.1\repo\io\netty\netty-buffer\4.1.33.Final\netty-buffer-4.1.33.Final.jar = 1677223475211
+E:\apache-maven-3.8.1\repo\io\netty\netty-transport\4.1.33.Final\netty-transport-4.1.33.Final.jar = 1677223475630
+E:\apache-maven-3.8.1\repo\io\netty\netty-codec\4.1.33.Final\netty-codec-4.1.33.Final.jar = 1677223475438
+E:\apache-maven-3.8.1\repo\io\netty\netty-handler-proxy\4.1.33.Final\netty-handler-proxy-4.1.33.Final.jar = 1677223472676
+E:\apache-maven-3.8.1\repo\io\netty\netty-codec-socks\4.1.33.Final\netty-codec-socks-4.1.33.Final.jar = 1677223473672
+E:\apache-maven-3.8.1\repo\io\netty\netty-resolver-dns\4.1.33.Final\netty-resolver-dns-4.1.33.Final.jar = 1677223474125
+E:\apache-maven-3.8.1\repo\io\netty\netty-resolver\4.1.33.Final\netty-resolver-4.1.33.Final.jar = 1677223474423
+E:\apache-maven-3.8.1\repo\io\netty\netty-codec-dns\4.1.33.Final\netty-codec-dns-4.1.33.Final.jar = 1677223474740
+E:\apache-maven-3.8.1\repo\org\apache\commons\commons-lang3\3.8.1\commons-lang3-3.8.1.jar = 1626235732982
+E:\apache-maven-3.8.1\repo\org\asynchttpclient\async-http-client\2.12.1\async-http-client-2.12.1.jar = 1626235529839
+E:\apache-maven-3.8.1\repo\org\asynchttpclient\async-http-client-netty-utils\2.12.1\async-http-client-netty-utils-2.12.1.jar = 1626235527949
+E:\apache-maven-3.8.1\repo\com\typesafe\netty\netty-reactive-streams\2.0.4\netty-reactive-streams-2.0.4.jar = 1626235530663
+E:\apache-maven-3.8.1\repo\com\sun\activation\javax.activation\1.2.0\javax.activation-1.2.0.jar = 1626235657827
+E:\apache-maven-3.8.1\repo\org\slf4j\slf4j-api\1.7.25\slf4j-api-1.7.25.jar = 1626235512027
+E:\apache-maven-3.8.1\repo\commons-codec\commons-codec\1.11\commons-codec-1.11.jar = 1626241178553
+E:\apache-maven-3.8.1\repo\com\yahoo\datasketches\sketches-core\0.8.3\sketches-core-0.8.3.jar = 1626235532836
+E:\apache-maven-3.8.1\repo\com\yahoo\datasketches\memory\0.8.3\memory-0.8.3.jar = 1626235532518
+E:\apache-maven-3.8.1\repo\com\google\code\gson\gson\2.8.5\gson-2.8.5.jar = 1632705276508
+E:\apache-maven-3.8.1\repo\org\apache\avro\avro\1.10.2\avro-1.10.2.jar = 1626235652169
+E:\apache-maven-3.8.1\repo\com\fasterxml\jackson\core\jackson-core\2.9.8\jackson-core-2.9.8.jar = 1626405397876
+E:\apache-maven-3.8.1\repo\org\apache\commons\commons-compress\1.20\commons-compress-1.20.jar = 1626241178321
+E:\apache-maven-3.8.1\repo\org\apache\avro\avro-protobuf\1.10.2\avro-protobuf-1.10.2.jar = 1626235533896
+E:\apache-maven-3.8.1\repo\com\fasterxml\jackson\module\jackson-module-jsonSchema\2.9.8\jackson-module-jsonSchema-2.9.8.jar = 1677223475644
+E:\apache-maven-3.8.1\repo\com\fasterxml\jackson\core\jackson-annotations\2.9.0\jackson-annotations-2.9.0.jar = 1626405397521
+E:\apache-maven-3.8.1\repo\javax\validation\validation-api\2.0.1.Final\validation-api-2.0.1.Final.jar = 1626404402333
+E:\apache-maven-3.8.1\repo\net\jcip\jcip-annotations\1.0\jcip-annotations-1.0.jar = 1626235533470
+E:\apache-maven-3.8.1\repo\io\projectreactor\reactor-core\3.4.16\reactor-core-3.4.16.jar = 1656302359914
+E:\apache-maven-3.8.1\repo\org\reactivestreams\reactive-streams\1.0.2\reactive-streams-1.0.2.jar = 1626404335486
+E:\apache-maven-3.8.1\repo\com\google\protobuf\protobuf-java\3.20.0\protobuf-java-3.20.0.jar = 1656302360224
+G:\code\clooker\admq-spring-boot-starter\src\main\java = 1677573756299
+G:\code\clooker\admq-spring-boot-starter\target\generated-sources\annotations = 1677576098433
+G:\code\clooker\admq-spring-boot-starter\target\apidocs\allclasses-frame.html = 1677576103159
+G:\code\clooker\admq-spring-boot-starter\target\apidocs\allclasses-noframe.html = 1677576103161
+G:\code\clooker\admq-spring-boot-starter\target\apidocs\constant-values.html = 1677576103108
+G:\code\clooker\admq-spring-boot-starter\target\apidocs\deprecated-list.html = 1677576103158
+G:\code\clooker\admq-spring-boot-starter\target\apidocs\help-doc.html = 1677576103172
+G:\code\clooker\admq-spring-boot-starter\target\apidocs\index-all.html = 1677576103144
+G:\code\clooker\admq-spring-boot-starter\target\apidocs\index.html = 1677576103163
+G:\code\clooker\admq-spring-boot-starter\target\apidocs\overview-tree.html = 1677576103141
+G:\code\clooker\admq-spring-boot-starter\target\apidocs\package-list = 1677576103066
+G:\code\clooker\admq-spring-boot-starter\target\apidocs\script.js = 1677576103175
+G:\code\clooker\admq-spring-boot-starter\target\apidocs\stylesheet.css = 1677576103174
