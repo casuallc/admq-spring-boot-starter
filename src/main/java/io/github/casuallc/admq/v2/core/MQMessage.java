@@ -11,21 +11,29 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.github.casuallc.admq;
+package io.github.casuallc.admq.v2.core;
 
-import io.github.casuallc.admq.exception.MQException;
+import org.apache.pulsar.client.api.Message;
+import org.apache.pulsar.client.api.MessageId;
 
-public abstract class ConsumerWrapper {
+public class MQMessage {
+    private Message<?> message;
 
-    private String topic;
+    private Object value;
 
-    String getTopic() {
-        return topic;
+    private MessageId id;
+
+    public MQMessage(Message<?> message) {
+        this.message = message;
+        this.value = message.getValue();
+        this.id = message.getMessageId();
     }
 
-    void setTopic(String topic) {
-        this.topic = topic;
+    public Object getValue() {
+        return value;
     }
 
-    public abstract void send(AdmqMessage message) throws MQException;
+    MessageId getId() {
+        return id;
+    }
 }

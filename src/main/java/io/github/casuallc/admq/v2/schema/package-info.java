@@ -11,22 +11,4 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.github.casuallc.admq.exception;
-
-public class AdmqException extends Exception {
-
-    public AdmqException() {
-    }
-
-    public AdmqException(String msg) {
-        super(msg);
-    }
-
-    public AdmqException(Exception e) {
-        super(e);
-    }
-
-    public AdmqException(String msg, Exception e) {
-        super(msg, e);
-    }
-}
+package io.github.casuallc.admq.v2.schema;

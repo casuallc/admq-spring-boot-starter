@@ -11,7 +11,25 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.github.casuallc.admq.exception;
+package io.github.casuallc.admq.v2.listener;
 
-public class AdmqClientException extends AdmqException {
+import io.github.casuallc.admq.v2.core.ConsumerFactory;
+
+/**
+ * 用于保存创建的消费客户端，接收消息后回调客户的方法.
+ * @param <T>
+ */
+public class MQMessageListenerContainer<T> {
+
+    private ConsumerFactory<T> consumerFactory;
+
+    private Object listener;
+
+    public MQMessageListenerContainer(ConsumerFactory<T> consumerFactory) {
+
+    }
+
+    public void setListener(Object listener) {
+        this.listener = listener;
+    }
 }

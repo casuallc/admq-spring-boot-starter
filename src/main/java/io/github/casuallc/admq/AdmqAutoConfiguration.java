@@ -59,7 +59,7 @@ public class AdmqAutoConfiguration {
             builder.listenerName(properties.getListenerName());
         }
         // 设置状态采集间隔
-        builder.statsInterval(10, TimeUnit.SECONDS);
+        builder.statsInterval(60, TimeUnit.SECONDS);
 
         log.info("Admq client init.");
         return builder.build();

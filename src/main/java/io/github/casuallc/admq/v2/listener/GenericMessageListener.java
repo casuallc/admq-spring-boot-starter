@@ -11,21 +11,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.github.casuallc.admq;
+package io.github.casuallc.admq.v2.listener;
 
-import io.github.casuallc.admq.exception.MQException;
+import org.apache.pulsar.client.api.Consumer;
 
-public abstract class ConsumerWrapper {
+public interface GenericMessageListener<T> {
 
-    private String topic;
+    void onMessage(T data);
 
-    String getTopic() {
-        return topic;
+    default void onMessage(T data, Consumer<T> consumer) {
+        throw new UnsupportedOperationException("Not support.");
     }
 
-    void setTopic(String topic) {
-        this.topic = topic;
-    }
-
-    public abstract void send(AdmqMessage message) throws MQException;
 }

@@ -11,21 +11,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.github.casuallc.admq;
+package io.github.casuallc.admq.v2.core;
 
-import io.github.casuallc.admq.exception.MQException;
+import org.apache.pulsar.client.api.Consumer;
 
-public abstract class ConsumerWrapper {
+/**
+ * 用于创建消费者客户端.
+ * @param <T>
+ */
+public class MQDefaultConsumerFactory<T> implements ConsumerFactory<T> {
 
-    private String topic;
+    public Consumer<T> createConsumer() {
 
-    String getTopic() {
-        return topic;
+        return null;
     }
 
-    void setTopic(String topic) {
-        this.topic = topic;
-    }
-
-    public abstract void send(AdmqMessage message) throws MQException;
 }

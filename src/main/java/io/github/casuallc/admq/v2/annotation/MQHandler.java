@@ -11,21 +11,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.github.casuallc.admq;
+package io.github.casuallc.admq.v2.annotation;
 
-import io.github.casuallc.admq.exception.MQException;
+import java.lang.annotation.Documented;
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
 
-public abstract class ConsumerWrapper {
+@Target({ ElementType.TYPE, ElementType.METHOD, ElementType.ANNOTATION_TYPE })
+@Retention(RetentionPolicy.RUNTIME)
+@Documented
+public @interface MQHandler {
 
-    private String topic;
-
-    String getTopic() {
-        return topic;
-    }
-
-    void setTopic(String topic) {
-        this.topic = topic;
-    }
-
-    public abstract void send(AdmqMessage message) throws MQException;
 }

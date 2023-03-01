@@ -11,21 +11,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.github.casuallc.admq;
+package io.github.casuallc.admq.v2.listener;
 
-import io.github.casuallc.admq.exception.MQException;
+public interface MQProducerListener<T> {
 
-public abstract class ConsumerWrapper {
-
-    private String topic;
-
-    String getTopic() {
-        return topic;
+    default void onSuccess(Object message) {
     }
 
-    void setTopic(String topic) {
-        this.topic = topic;
-    }
+    default void onError(Object message, Throwable exception) {
 
-    public abstract void send(AdmqMessage message) throws MQException;
+    }
 }

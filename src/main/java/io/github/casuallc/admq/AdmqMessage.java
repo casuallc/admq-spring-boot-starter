@@ -1,6 +1,6 @@
 package io.github.casuallc.admq;
 
-import io.github.casuallc.admq.exception.AdmqException;
+import io.github.casuallc.admq.exception.MQException;
 import org.apache.pulsar.client.api.Consumer;
 import org.apache.pulsar.client.api.Message;
 import org.apache.pulsar.client.api.MessageId;
@@ -29,11 +29,11 @@ public class AdmqMessage {
         return value;
     }
 
-    public void acknowledge() throws AdmqException {
+    public void acknowledge() throws MQException {
         try {
             consumer.acknowledge(id);
         } catch (Exception e) {
-            throw new AdmqException(e);
+            throw new MQException(e);
         }
     }
 }
