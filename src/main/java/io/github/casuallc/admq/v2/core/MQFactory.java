@@ -68,11 +68,36 @@ public class MQFactory {
         return producers.get(id);
     }
 
+    /**
+     * 根据topic和producerName创建或者获取producer，创建后会保存到缓存中。
+     * @param topic
+     * @param producerName
+     * @param schema
+     * @return
+     * @param <T>
+     */
     public <T> MQTemplate<T> createIfNotCached(String topic, String producerName, Schema<T> schema) {
         String id = ApusicUtils.getProducerId(topic, producerName);
         return producers.computeIfAbsent(id, a -> {
             try {
                 return newProducerBuilder(topic, schema).producerName(producerName).build();
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+        });
+    }
+
+    /**
+     * 通过newProducerBuilder自定义ProducerBuilder创建Producer。
+     * MQProducerBuilder<T> builder
+     * @return
+     * @param <T>
+     */
+    public <T> MQTemplate<T> createIfNotCached(MQProducerBuilder<T> builder, String producerName) {
+        String id = ApusicUtils.getProducerId(builder.getTopic(), producerName);
+        return producers.computeIfAbsent(id, a -> {
+            try {
+                return builder.producerName(producerName).build();
             } catch (Exception e) {
                 throw new RuntimeException(e);
             }
@@ -91,11 +116,6 @@ public class MQFactory {
                 throw new RuntimeException(e);
             }
         });
-
-//        if (consumer != null) {
-//            log.info("[{}/{}] Consumer already registered.", listener.topic(), listener.consumerName());
-//        }
-
     }
 
     public Consumer<?> createConsumer(MessageListenerAdapter adapter, String topic, MQListener listener) {

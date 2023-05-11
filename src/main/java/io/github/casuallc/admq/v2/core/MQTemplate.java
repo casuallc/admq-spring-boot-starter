@@ -15,7 +15,9 @@ package io.github.casuallc.admq.v2.core;
 
 import io.github.casuallc.admq.exception.MQProducerException;
 import io.github.casuallc.admq.v2.listener.MQProducerListener;
+import java.util.concurrent.TimeUnit;
 import org.apache.pulsar.client.api.Producer;
+import org.apache.pulsar.client.api.TypedMessageBuilder;
 
 public class MQTemplate<T> {
 
@@ -26,27 +28,32 @@ public class MQTemplate<T> {
     }
 
     public void send(T message) throws MQProducerException {
-        try {
-            producer.send(message);
-        } catch (Exception e) {
-            throw new MQProducerException("message send failed.", e);
-        }
+        send(message, null);
     }
 
     public void sendAsync(T message, MQProducerListener<T> producerListener) throws MQProducerException {
+        sendAsync(message, producerListener, null);
+    }
+
+    public void send(T message, MessageSendConfig config) throws MQProducerException {
         try {
-            doSend(message, producerListener);
+            newMessage(message, config).send();
         } catch (Exception e) {
             throw new MQProducerException("message send failed.", e);
         }
     }
 
-//    public void sendAsync(T message) {
-//
-//    }
+    public void sendAsync(T message, MQProducerListener<T> producerListener, MessageSendConfig config)
+            throws MQProducerException {
+        try {
+            doSend(message, producerListener, config);
+        } catch (Exception e) {
+            throw new MQProducerException("message send failed.", e);
+        }
+    }
 
-    private void doSend(T message, MQProducerListener<T> producerListener) {
-        producer.sendAsync(message).thenAccept(messageId -> {
+    private void doSend(T message, MQProducerListener<T> producerListener, MessageSendConfig config) {
+        newMessage(message, config).sendAsync().thenAccept(messageId -> {
             if (producerListener != null) {
                 producerListener.onSuccess(message);
             }
@@ -56,5 +63,30 @@ public class MQTemplate<T> {
             }
             return null;
         });
+    }
+
+    private TypedMessageBuilder<T> newMessage(T message, MessageSendConfig config) {
+        if (config == null) {
+            return producer.newMessage().value(message);
+        }
+
+        TypedMessageBuilder<T> builder = producer.newMessage();
+        if (config.getProperties() != null) {
+            builder.properties(config.getProperties());
+        }
+        if (config.getKey() != null) {
+            builder.key(config.getKey());
+        }
+        if (config.getSequenceId() != -1) {
+            builder.sequenceId(config.getSequenceId());
+        }
+        if (config.getDeliverAtTime() != -1) {
+            builder.deliverAt(config.getDeliverAtTime());
+        }
+        if (config.getDeliverAfterTime() != -1) {
+            builder.deliverAfter(config.getDeliverAfterTime(), TimeUnit.SECONDS);
+        }
+
+        return builder.value(message);
     }
 }
